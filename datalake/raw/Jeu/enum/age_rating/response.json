@@ -1,0 +1,75 @@
+[
+    {
+        "id": 22474,
+        "category": 1,
+        "rating": 8,
+        "checksum": "361fd414-94d8-d6f8-6641-47abd3e8a75c"
+    },
+    {
+        "id": 43430,
+        "category": 1,
+        "rating": 8,
+        "checksum": "5970434e-a37f-d43d-8975-2b23ab3370b3"
+    },
+    {
+        "id": 2853,
+        "category": 1,
+        "content_descriptions": [
+            4244,
+            4245,
+            4246,
+            4247
+        ],
+        "rating": 10,
+        "checksum": "2d21809b-c282-95ba-69fb-5eda4d684b43"
+    },
+    {
+        "id": 32550,
+        "category": 1,
+        "content_descriptions": [
+            32972
+        ],
+        "rating": 9,
+        "checksum": "40557417-e2a9-9a4f-5810-4159463467a1"
+    },
+    {
+        "id": 10,
+        "category": 1,
+        "content_descriptions": [
+            24,
+            25
+        ],
+        "rating": 10,
+        "checksum": "afa0adf4-039f-f8e6-4c06-4ac834a784ea"
+    },
+    {
+        "id": 13683,
+        "category": 1,
+        "rating": 10,
+        "checksum": "e0288158-efdc-c4cb-4e94-8f88b121577f"
+    },
+    {
+        "id": 78460,
+        "category": 1,
+        "rating": 8,
+        "checksum": "449b97bc-cbf6-1003-f877-37e6f14ad6f8"
+    },
+    {
+        "id": 70537,
+        "category": 1,
+        "rating": 8,
+        "checksum": "f6fac928-4f1b-c728-3c13-87ecf184dd0e"
+    },
+    {
+        "id": 18037,
+        "category": 2,
+        "rating": 4,
+        "checksum": "11cb1496-f875-28cc-c59f-544d8e523615"
+    },
+    {
+        "id": 24,
+        "category": 1,
+        "rating": 8,
+        "checksum": "715b197f-2b16-2c09-8e4b-3157674e3752"
+    }
+]

@@ -1,0 +1,140 @@
+[
+    {
+        "id": 26,
+        "name": "Quiz/Trivia",
+        "slug": "quiz-trivia",
+        "checksum": "ec87e048-ffc2-cd07-80d2-ab398c046fa3"
+    },
+    {
+        "id": 30,
+        "name": "Pinball",
+        "slug": "pinball",
+        "checksum": "97c1ed9f-23b5-2967-3af9-6bec78550aed"
+    },
+    {
+        "id": 31,
+        "name": "Adventure",
+        "slug": "adventure",
+        "checksum": "84da7880-b95f-f981-9c8d-b291bebff079"
+    },
+    {
+        "id": 32,
+        "name": "Indie",
+        "slug": "indie",
+        "checksum": "c8db34f1-7560-9b3e-f114-0fff938eea40"
+    },
+    {
+        "id": 33,
+        "name": "Arcade",
+        "slug": "arcade",
+        "checksum": "e4484fce-984d-ae2f-2561-de9140fad4af"
+    },
+    {
+        "id": 34,
+        "name": "Visual Novel",
+        "slug": "visual-novel",
+        "checksum": "e2232c2f-0009-1631-08c2-2ce9557dc1af"
+    },
+    {
+        "id": 35,
+        "name": "Card & Board Game",
+        "slug": "card-and-board-game",
+        "checksum": "251db224-8fdf-291a-63ff-a19bf147dbb3"
+    },
+    {
+        "id": 36,
+        "name": "MOBA",
+        "slug": "moba",
+        "checksum": "cf5927b5-73d8-e820-d1d0-609ed6b27950"
+    },
+    {
+        "id": 2,
+        "name": "Point-and-click",
+        "slug": "point-and-click",
+        "checksum": "327c1517-6252-9ed5-6a1e-9de160986d8c"
+    },
+    {
+        "id": 4,
+        "name": "Fighting",
+        "slug": "fighting",
+        "checksum": "579fc12e-8d14-f5ec-3b2f-29bc402e282a"
+    },
+    {
+        "id": 5,
+        "name": "Shooter",
+        "slug": "shooter",
+        "checksum": "ee167402-1696-17fa-b3c6-692c94837018"
+    },
+    {
+        "id": 7,
+        "name": "Music",
+        "slug": "music",
+        "checksum": "7d3179ec-03ac-5819-6b1e-2d17d3240556"
+    },
+    {
+        "id": 8,
+        "name": "Platform",
+        "slug": "platform",
+        "checksum": "7e69f327-90df-3ca6-0cdf-c8c34b633522"
+    },
+    {
+        "id": 9,
+        "name": "Puzzle",
+        "slug": "puzzle",
+        "checksum": "0a3c4bb4-2c52-bc4a-1502-2f6086a62169"
+    },
+    {
+        "id": 10,
+        "name": "Racing",
+        "slug": "racing",
+        "checksum": "c2755390-9341-8555-02e1-fd328ccfe25c"
+    },
+    {
+        "id": 11,
+        "name": "Real Time Strategy (RTS)",
+        "slug": "real-time-strategy-rts",
+        "checksum": "94a164a4-6c1a-9ebb-01bb-73c5308ecb61"
+    },
+    {
+        "id": 12,
+        "name": "Role-playing (RPG)",
+        "slug": "role-playing-rpg",
+        "checksum": "f8c8b849-de94-f296-1c01-e291a19b1242"
+    },
+    {
+        "id": 13,
+        "name": "Simulator",
+        "slug": "simulator",
+        "checksum": "4c77f679-1203-60b7-6960-a1aae10a031e"
+    },
+    {
+        "id": 14,
+        "name": "Sport",
+        "slug": "sport",
+        "checksum": "99691efb-e7aa-bfcb-8aa8-65e279eb7c2e"
+    },
+    {
+        "id": 15,
+        "name": "Strategy",
+        "slug": "strategy",
+        "checksum": "9aaaed3a-332f-1fb7-52cb-a139770e232c"
+    },
+    {
+        "id": 16,
+        "name": "Turn-based strategy (TBS)",
+        "slug": "turn-based-strategy-tbs",
+        "checksum": "3026b81a-6164-81f1-e0d5-99b2deed7d7a"
+    },
+    {
+        "id": 24,
+        "name": "Tactical",
+        "slug": "tactical",
+        "checksum": "957b6008-a585-fb9d-eb86-822f32ce19dc"
+    },
+    {
+        "id": 25,
+        "name": "Hack and slash/Beat 'em up",
+        "slug": "hack-and-slash-beat-em-up",
+        "checksum": "8c337bec-c51a-4ae9-a96f-df15368aea06"
+    }
+]

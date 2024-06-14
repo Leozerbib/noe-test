@@ -1,41 +1,100 @@
-from datetime import datetime, timedelta
-from airflow import DAG
-from airflow.operators.python import PythonOperator
-import subprocess
+import json
+import pandas as pd
 
-def run_script(script_path):
-    result = subprocess.run(["python3", script_path], capture_output=True, text=True)
-    print(result.stdout)
-    print(result.stderr)
+with open('datalake/raw/Twitch/game/top1000games/response.json', 'r') as file:
+        top_games = json.load(file)
+with open('datalake/raw/Jeu/jeu/info/response.json', 'r') as file:
+        game_info = json.load(file)
+with open('datalake/raw/Twitch/game/topStreamTopGame/response.json', 'r') as file:
+        top_stream = json.load(file)
 
-with DAG(
-    'dagAirflow',
-    default_args={
-        'depends_on_past': False,
-        'email': ['airflow@example.com'],
-        'email_on_failure': False,
-        'email_on_retry': False,
-        'retries': 1,
-        'retry_delay': timedelta(seconds=15),
-    },
-    description='A DAG to fetch and save movie data',
-    schedule=None,  # Remplacez schedule_interval par schedule
-    start_date=datetime(2021, 1, 1),
-    catchup=False,
-    tags=['example'],
-) as dag:
 
-    fetch_data_1 = PythonOperator(
-        task_id='fetch_countries',
-        python_callable=run_script,
-        op_kwargs={'script_path': 'C:\Users\leo\OneDrive - ISEP\Bureau\taffe\test\noe test\controler.py'},
-    )
 
-    fetch_data_2 = PythonOperator(
-        task_id='fetch_languages',
-        python_callable=run_script,
-        op_kwargs={'script_path': '/path/to/your/directory/fetch_data_2.py'},
-    )
+# Conversion en DataFrame
+top_games_df = pd.DataFrame.from_dict(top_games)
+game_info_df = pd.DataFrame.from_dict(game_info)
+top_stream_df = pd.DataFrame.from_dict(top_stream)
 
-    fetch_data_1
-    fetch_data_2
+
+class Game:
+    def __init__(self, id,igdb_id, game_name,ag_rating,first_release_date,game_engines,
+                game_modes,genres, platforms, rating,
+                rating_count,themes,viewer_count, ):
+        self.id = id
+        self.igdb_id = igdb_id
+        self.name = game_name
+        self.ag_rating=ag_rating
+        self.first_release_date=first_release_date
+        self.game_engines=game_engines
+        self.game_modes=game_modes
+        self.genres=genres
+        self.platforms=platforms
+        self.rating=rating
+        self.rating_count=rating_count
+        self.themes=themes
+        self.viewer_count = viewer_count
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "igdb_id": self.igdb_id,
+            "name": self.name,
+            "ag_rating": self.ag_rating,
+            "first_release_date": self.first_release_date,
+            "game_engines": self._convert_to_native(self.game_engines),
+            "game_modes": self._convert_to_native(self.game_modes),
+            "genres": self._convert_to_native(self.genres),
+            "platforms": self._convert_to_native(self.platforms),
+            "rating": self.rating,
+            "rating_count": self.rating_count,
+            "themes": self._convert_to_native(self.themes),
+            "viewer_count": self.viewer_count
+        }
+    def _convert_to_native(self, value):
+        if isinstance(value, pd.Series):
+            return value.tolist()
+        return value
+    def __repr__(self):
+        return self.__str__()
+
+       
+
+
+game=[]
+stream=[]
+
+for i in top_games_df.to_dict('records') :
+    print("top_games_df") 
+    print(i)
+
+    if (i['igdb_id'] == ''):
+         continue
+    igpd_id  = int(i['igdb_id'])
+    game_id  = int(i['id'])
+    game_in = game_info_df.loc[game_info_df.where(game_info_df['id'] == igpd_id)]
+
+    if game_in.empty:
+        continue
+    print("game_info_df")
+    print(game_in)
+    stream_in = top_stream_df.where(top_stream_df['game_id'] == game_id)
+    print("top_stream_df")
+    print(stream_in)
+    g = Game(
+           i['id']
+           ,i['igdb_id']
+           ,i['name']
+           ,game_info_df['aggregated_rating']
+           ,game_info_df['first_release_date']
+           ,game_info_df['game_engines']
+           ,game_info_df['game_modes']
+           ,game_info_df['genres']
+           ,game_info_df['platforms']
+           ,game_info_df['rating']
+           ,game_info_df['rating_count']
+           ,game_info_df['themes']
+           ,sum(top_stream_df['viewer_count']))
+    print("game")
+    game_json = json.dumps(g.to_dict(), indent=4)
+    print(game_json)
+    break
+    

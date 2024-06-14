@@ -1,4 +1,13 @@
-api_url = 'https://api.watchmode.com/v1/'
-auth_key = '?apiKey=mUStPJcARoVXtyLf3bxfG4EpCrmRNnqdI1pSYrSY'
+api_url = 'https://api.twitch.tv/helix/'
+auth_key = 'nsisw2bzbsmxvll0wrlxsbkf7pnwc6'
+Client_ID = 'de0st9nif0zdqgdcue9vgyuvkp0ys8', 
 
-URL_fetch_plateform = api_url + 'sources/' + auth_key
+headers ={
+    "Client-ID": 'de0st9nif0zdqgdcue9vgyuvkp0ys8', 
+    "Authorization": 'Bearer a6asqwmexk9u4oijju6iqv7xsgfh0m'
+}
+
+
+URL_fetch_Top_game = api_url + 'games/top'
+URL_fetch_Top_stream = api_url + 'streams'
+

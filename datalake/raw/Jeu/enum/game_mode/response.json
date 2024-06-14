@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Single player",
+        "slug": "single-player",
+        "checksum": "8b072774-6134-3701-8d78-b9f9b1474989"
+    },
+    {
+        "id": 2,
+        "name": "Multiplayer",
+        "slug": "multiplayer",
+        "checksum": "6230d8b7-fa43-7367-a639-f5df4200f43b"
+    },
+    {
+        "id": 3,
+        "name": "Co-operative",
+        "slug": "co-operative",
+        "checksum": "f7fb0270-7166-9390-c1b2-03e713105494"
+    },
+    {
+        "id": 4,
+        "name": "Split screen",
+        "slug": "split-screen",
+        "checksum": "f524b37d-fa94-ccb0-d89a-67c09efbe565"
+    },
+    {
+        "id": 5,
+        "name": "Massively Multiplayer Online (MMO)",
+        "slug": "massively-multiplayer-online-mmo",
+        "checksum": "ff34fed9-3d8c-85d5-b328-e98da95a49a4"
+    },
+    {
+        "id": 6,
+        "name": "Battle Royale",
+        "slug": "battle-royale",
+        "checksum": "d7f2dab0-0f92-7af3-9dba-1eb49edb82a3"
+    }
+]

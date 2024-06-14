@@ -30,26 +30,40 @@ def formated(source,entity,path):
 
 def sources(source,entity,path):
     if source == 1:
-        path += "PlateformStreaming/"
+        path += "Twitch/"
         return entitysource1(entity,path)
     if source == 2:
-        path += "ListFilm/"
+        path += "Jeu/"
         return entitysource2(entity,path)
 
 def entitysource1(entity,path):
     if entity == 1:
-        path += "enum/plateform/"
+        path += "game/top1000games/"
     if entity == 2:
-        path += "gares/"
+        path += "game/topStreamTopGame/"
     return path
 
 def entitysource2(entity,path):
     if entity == 1:
-        path += "enum/countries/"
+        path += "jeu/info/"
     if entity == 2:
-        path += "enum/languages/"
+        path += "enum/age_rating/"
     if entity == 3:
-        path += "enum/genres/"
+        path += "enum/game_engine/"
+    if entity == 4:
+        path += "enum/game_mode/"
+    if entity == 5:
+        path += "enum/game_genre/"
+    if entity == 6:
+        path += "enum/game_language/"
+    if entity == 7:
+        path += "enum/game_langue/"
+    if entity == 8:
+        path += "enum/game_theme/"
+    if entity == 9:
+        path += "enum/game_loca/"
+    if entity == 10:
+        path += "enum/game_platform/"
     return path
 
 def storeDir(response,path):
